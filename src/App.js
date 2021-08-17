@@ -8,12 +8,12 @@ const App = () => {
       
       <Switch>
 
-        <Route path='/'>
-          <ThreeFaces />
-        </Route>
-
         <Route path='/review'>
           review
+        </Route>
+
+        <Route path='/'>
+          <ThreeFaces />
         </Route>
 
       </Switch>
