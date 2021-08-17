@@ -1,0 +1,119 @@
+@import '../../variables.sass'
+
+.root
+  position: relative
+  background: $green
+  width: 120px
+  height: 120px
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  cursor: pointer
+  transition: 200ms ease-out
+
+.root--active
+  transform: scale(1.3)
+  .face
+    animation: scaleBorder 800ms ease-out forwards
+  .particle_1
+    animation: particle1 450ms ease-out forwards
+    animation-delay: 300ms
+  .particle_2
+    animation: particle2 450ms ease-out forwards
+    animation-delay: 250ms
+  .particle_3
+    animation: particle3 450ms ease-out forwards
+    animation-delay: 200ms
+  .eyes
+    height: 5px
+
+.face
+  position: relative
+  width: 68px
+  height: 68px
+
+.eyes
+  top: 20px
+  left: 50%
+  transition: 400ms linear
+  height: 10px
+  overflow: hidden
+  transform: translateX(-50%)
+  width: 33px
+  position: absolute
+  display: flex
+  justify-content: space-between
+
+.eye
+  width: 10px
+  height: 10px
+  background: #ffff
+  border-radius: 50%
+
+.border_smile
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  left: 0
+  svg
+    width: 100%
+    height: 100%
+    color: #ffff
+
+.particles
+  position: absolute
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+
+.particle
+  background: $green
+  transition: 300ms ease-out
+  transition-delay: 300ms
+  position: absolute
+  transform: translate(-50%, -50%)
+  border-radius: 50%
+
+.particle_1
+  width: 20px
+  height: 20px
+
+.particle_2
+  width: 28px
+  height: 28px
+
+.particle_3
+  width: 44px
+  height: 44px
+
+@keyframes scaleBorder
+  0%
+    transform: scaleY(1)
+  35%
+    transform: scaleY(0.7)
+  60%
+    transform: scaleY(1.2)
+  100%
+    transform: scaleY(1)
+
+@keyframes particle1
+  60%
+    transform: scale(0.75) translate(41px, -111px)
+  100%
+    transform: scale(0.7) translate(40px, -110px)
+
+@keyframes particle2
+  60%
+    transform: scale(0.75) translate(-107px, 47px)
+  100%
+    transform: scale(0.7) translate(-105px, 45px)
+
+@keyframes particle3
+  60%
+    transform: scale(0.75) translate(37px, 67px)
+  100%
+    transform: scale(0.7) translate(35px, 65px)
+    
+    
