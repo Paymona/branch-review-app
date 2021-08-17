@@ -5,4 +5,45 @@
   display: flex
   align-items: center
   justify-content: center
-  gap: 70px
+
+.wrap
+
+.title
+  text-align: center
+  letter-spacing: 0.05rem
+  transform: translateY(-100px)
+  font-size: 28px
+  color: $dark-4
+  font-weight: 600
+
+.faces
+  display: flex
+  align-items: center
+  justify-content: space-between
+  transform: scale(1.4)
+
+.face
+  width: 220px
+
+.face_description
+  margin-top: 20px
+  text-align: center
+  font-size: 18px
+  font-weight: 600
+  letter-spacing: 0.05rem
+  pointer-events: none
+  opacity: 0
+  transition: 100ms linear
+
+.face_description--active
+  pointer-events: none
+  opacity: 1
+
+.face_description_happy
+  color: $green
+
+.face_description_poker
+  color: $yellow
+
+.face_description_sad
+  color: $red

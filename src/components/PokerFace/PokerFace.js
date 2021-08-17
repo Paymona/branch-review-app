@@ -1,27 +1,25 @@
 import classNames from 'classnames'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import { BorderPoker } from '../../icons'
 import styles from '../../styles/components/PokerFace/PokerFace.module.sass'
 
 const PokerFace = ({
-  className
+  className,
+  onClick,
+  disabled,
+  active
 }) => {
 
-  const [active, setActive] = useState(false)
-
   const handleClick = () => {
-    setActive(true)
+    onClick()
   }
-
-  useEffect(() => {
-    setActive(false)
-  }, [])
 
   return (
     <div 
       className={classNames(
         className,
         styles.root, 
+        disabled && styles['root--disabled'],
         active && styles['root--active']
       )}
       onClick={() => handleClick()}

@@ -4,7 +4,7 @@ import { ThreeFaces } from './routes'
 
 const App = () => {
   return (
-    <div>
+    <div className='App'>
       
       <Switch>
 
