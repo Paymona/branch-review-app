@@ -29,7 +29,7 @@ BorderSad.propTypes = {
 
 BorderSad.defaultProps = {
   className: '',
-  size: 24
+  size: 68
 }
 
 export default BorderSad

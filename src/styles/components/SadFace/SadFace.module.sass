@@ -18,19 +18,22 @@
     animation: scaleBorder 800ms ease-out forwards
   .particle_1
     animation: particle1 450ms ease-out forwards
-    animation-delay: 300ms
+    animation-delay: 290ms
     svg
-      transform: rotateZ(100deg) !important
+      animation: svgRotate1 500ms ease-out forwards
+      animation-delay: 290ms
   .particle_2
     animation: particle2 450ms ease-out forwards
-    animation-delay: 250ms
+    animation-delay: 170ms
     svg
-      transform: rotateZ(100deg) !important
+      animation: svgRotate2 500ms ease-out forwards
+      animation-delay: 170ms
   .particle_3
     animation: particle3 450ms ease-out forwards
-    animation-delay: 200ms
+    animation-delay: 230ms
     svg
-      transform: rotateZ(60deg) !important
+      animation: svgRotate3 500ms ease-out forwards
+      animation-delay: 230ms
   .eye__wrap
     margin-top: 5px
     transition: 300ms
@@ -117,6 +120,7 @@
     width: 53px
     height: 53px
 
+
 @keyframes scaleBorder
   0%
     transform: scaleY(1)
@@ -127,22 +131,42 @@
   100%
     transform: scaleY(1)
 
+
 @keyframes particle1
   60%
-    transform: scale(0.75) translate(35px, 68px)
+    transform: scale(0.75) translate(37px, 72px)
   100%
-    transform: scale(0.7) translate(33px, 65px)
+    transform: scale(0.7) translate(35px, 68px)
 
 @keyframes particle2
   60%
-    transform: scale(0.75) translate(-129px, -78px)
+    transform: scale(0.75) translate(-131px, -82px)
   100%
-    transform: scale(0.75) translate(-125px, -75px)
+    transform: scale(0.75) translate(-128px, -79px)
 
 @keyframes particle3
   60%
-    transform: scale(0.75) translate(41px, -111px)
+    transform: scale(0.75) translate(43px, -114px)
   100%
-    transform: scale(0.7) translate(40px, -110px)
+    transform: scale(0.7) translate(42px, -112px)
+
+
+@keyframes svgRotate1
+  20%
+    transform: rotateZ(-250deg)
+  100%
+    transform: rotateZ(0deg)
+
+@keyframes svgRotate2
+  20%
+    transform: rotateZ(-150deg)
+  100%
+    transform: rotateZ(100deg)
+
+@keyframes svgRotate3
+  20%
+    transform: rotateZ(-160deg)
+  100%
+    transform: rotateZ(60deg)
     
     

@@ -29,7 +29,7 @@ BorderPoker.propTypes = {
 
 BorderPoker.defaultProps = {
   className: '',
-  size: 24
+  size: 68
 }
 
 export default BorderPoker

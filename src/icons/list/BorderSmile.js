@@ -29,7 +29,7 @@ BorderSmile.propTypes = {
 
 BorderSmile.defaultProps = {
   className: '',
-  size: 24
+  size: 68
 }
 
 export default BorderSmile

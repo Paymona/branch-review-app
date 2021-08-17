@@ -29,7 +29,7 @@ TriangleParticular.propTypes = {
 
 TriangleParticular.defaultProps = {
   className: '',
-  size: 24
+  size: 68
 }
 
 export default TriangleParticular

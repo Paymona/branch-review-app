@@ -5,8 +5,8 @@ import styles from '../../styles/routes/ThreeFaces/ThreeFaces.module.sass'
 const ThreeFaces = () => {
   return (
     <div className={styles.root}>
-      <SadFace />
       <PokerFace />
+      <SadFace />
       <HappyFace />
     </div>
   )
