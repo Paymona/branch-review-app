@@ -10,6 +10,7 @@ $yellow: #F0AC00
 $red: #F56363
 $dark-4: #3A4753
 $light-1: #A7B6CB
+$light-3: #EDF1F5
 $primary-1: #486BE4
 
 @mixin x-small 
@@ -39,3 +40,16 @@ $primary-1: #486BE4
 @mixin xxx-large 
   @media (min-width: #{$xxx-large-width}) 
     @content
+
+@keyframes fadeOut
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+
+@keyframes fadeIn
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+    

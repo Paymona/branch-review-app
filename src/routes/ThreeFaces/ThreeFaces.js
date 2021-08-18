@@ -1,7 +1,7 @@
 import classNames from 'classnames'
 import React, { useEffect, useState } from 'react'
-import { useHistory } from 'react-router-dom'
-import { HappyFace, PokerFace, SadFace } from '../../components/'
+import { useHistory, useParams } from 'react-router-dom'
+import { API, HappyFace, PokerFace, SadFace } from '../../components/'
 import styles from '../../styles/routes/ThreeFaces/ThreeFaces.module.sass'
 
 const ThreeFaces = () => {
@@ -10,15 +10,34 @@ const ThreeFaces = () => {
 
   const history = useHistory()
 
+  const { id } = useParams()
+
   useEffect(() => {
 
     if (status === null) return
 
-    setTimeout(() => {
+    const config = {
+      method: 'post',
+      url: `review/create?branch_id=${id}`,
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json'
+      },
+      data: JSON.stringify({
+        status,
+        date: new Date()
+      })
+    }
+
+    API(config)
+
+    const timer = setTimeout(() => {
       window.location.reload()
     }, 10000)
 
-  }, [status])
+    return () => clearTimeout(timer)
+
+  }, [status, id])
 
   return (
     <div className={styles.root}>
@@ -91,7 +110,7 @@ const ThreeFaces = () => {
               styles.more_btn, 
               status !== null && styles['more_btn--active']
             )}
-            onClick={() => history.push('/review')}
+            onClick={() => history.push(`/${id}/review`)}
           >
             Оставить отзыв
           </button>

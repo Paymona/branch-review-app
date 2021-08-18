@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Switch } from 'react-router-dom'
-import { ThreeFaces } from './routes'
+import { ThreeFaces, Review, ThanksPage } from './routes'
 
 const App = () => {
   return (
@@ -8,11 +8,15 @@ const App = () => {
       
       <Switch>
 
-        <Route path='/review'>
-          review
+        <Route path='/:id/thanks'>
+          <ThanksPage />
         </Route>
 
-        <Route path='/'>
+        <Route path='/:id/review'>
+          <Review />
+        </Route>
+
+        <Route path='/:id/'>
           <ThreeFaces />
         </Route>
 
