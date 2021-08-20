@@ -24,8 +24,7 @@ const ThreeFaces = () => {
         'Content-Type': 'application/json'
       },
       data: JSON.stringify({
-        status,
-        date: new Date()
+        status
       })
     }
 
